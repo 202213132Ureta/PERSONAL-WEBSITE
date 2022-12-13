@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="Daniel Ureta Logo.jpg" class="logo">
+            <ul>
+                <li><a href="Personal Website.html">HOME</a></li>
+                <li><a href="About Me.html">ABOUT ME</a></li>
+                <li><a href="Gallery.html">GALLERY</a></li>
+                <li><a href="Contacts.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--WITH INLINE JAVASCRIPT-->
+    <div class="full-img" id="fullimgbox">
+        <img src="kidme.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+
+        <img src="kidme.jpg" onclick="openFullImg(this.src)">
+        <img src="kidme2.jpg" onclick="openFullImg(this.src)">
+        <img src="kidme3.jpg" onclick="openFullImg(this.src)">
+        <img src="highschool me.jpg" onclick="openFullImg(this.src)">
+        <img src="highschoolme2.jpg" onclick="openFullImg(this.src)">
+        <img src="highschoolme3.jpg" onclick="openFullImg(this.src)">
+        <img src="presentme.jpg" onclick="openFullImg(this.src)">
+        <img src="presentme2.jpg" onclick="openFullImg(this.src)">
+        <img src="presentme3.jpg" onclick="openFullImg(this.src)">
+
+    </div>
+ <script>
+    var fullimgbox = document.getElementById("fullimgbox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+        fullimgbox.style.display = "flex";  
+        fullImg.src = pic;
+    }
+    function closeFullImg(){
+        fullimgbox.style.display = "none";
+    }
+ </script>
+</body>
